@@ -1,0 +1,185 @@
+# Work plan for GÉANT3 Identity Federations
+
+
+This is a work plan for GÉANT3 Identity Federations.
+
+Available resources include:
+
+* NorduNet	Nordic	 	4.4
+* DFN	 	Germany	 	3.6
+* SurfNet	Netherland	3.0
+* CARNet	Croatia	 	1.2
+* Terena	Netherlands	1.4
+* RENATER	France	 	0.8
+* CESnet	Chezch	 	0.4
+* NIIF		Hungary	 	0.4
+* PIONIER	Polen	 	0.4
+* SWITCH	Switzerland	0.4
+* RedIRIS	Spain	 	0.4
+
+Total of 16FTE.
+
+
+Full list of individuals participating in year 1
+
+* Andreas Åkre Solberg, UNINETT, <mailto:Andreas.Solberg@uninett.no>
+* Miroslav Milinovic, CARNET, <mailto:miro@srce.hr>
+* Dubravko Penezic, CARNET, <mailto:dpenezic@srce.hr>
+* Dubravko Voncina, CARNET, <mailto:dubravko.voncina@srce.hr>
+* Mijo Djerek, CARNET, <mailto:mijo.djerek@srce.hr>
+* Jürgen Rauschenbach, DFN, <mailto:jrau@dfn.de>
+* Sascha Neinert, DFN, <mailto:sascha.neinert@rus.uni-stuttgart.de>
+* Torsten Kersting, DFN, <mailto:kersting@dfn.de>
+* Kristof Bajnok, NIIF, <mailto:bajnokk@niif.hu>
+* Janos Mohacsi, NIIF, <mailto:mohacsi@niif.hu>
+* David Simonsen, Nordunet, <mailto:david@wayf.dk>
+* Jacob-Steen Madsen, Nordunet, <mailto:jsm@wayf.dk>
+* Ajay Daryanani, RedIRIS, <mailto:ajay.daryanani@rediris.es>
+* Jaime Perez, RedIRIS, <mailto:jaime.perez@rediris.es>
+* Candido Rodriguez, RedIRIS, <mailto:candido.rodriguez@rediris.es>
+* Daniel Garcia, RedIRIS, <mailto:daniel.garcia@rediris.es>
+* Mehdi Hached, RENATER, <mailto:hached@renater.fr>
+* Lukas Hämmerle, SWITCH, <mailto:lukas.haemmerle@switch.ch>
+* Thomas Lenggenhager, SWITCH, <mailto:lenggenhager@switch.ch>
+* 
+
+
+
+
+
+GANNT Chart
+
+![](http://clippings.erlang.no/JRA3T2.png)
+
+
+
+## User-centric Identity
+
+Last years within the Identity field, user-centric identity has gained alot of attension. There are at least two significant user-centric technologies that is worth exploring in the context of educational federations, including:
+
+* OpenID
+* InformationCard
+
+OpenID is already considered and tested within educational federations, and some even support it in production. InfomationCard is a far less explored area, but many thinks it will play a really big role in the future.
+
+In the first year of *Identity Federations* the focus will be on investigating this new technologies, and understand how to make use of them in *educational federations*.
+
+*Tentative Participants:*
+
+* CARNet/SRCE
+* RedIRIS
+* DFN
+
+
+## Federation Lab
+
+Running a federation involves providing a test environment including SP and IdP facilities that SPs and IdPs can use in order to test their deployments without connecting to the live production environments. As most european federation supports the SAML 2.0 standards, european federations most likely run very similar test facilities. This task involves looking into creating a common European test facility. With joint effort we can improve the functionality of such a test facility beyond what is available today. We call this common federation test facility the “Federation Lab”.
+
+Features to be included in the *federation lab*:
+
+Automatically registering test entities, with no manually administration by federation operators.
+
+* Ability to test an SP against an IdP in the Federation Lab
+* Ability to test an IdP against an SP in the Federation Lab
+* The Federation Lab will report any misbehaviour of the entity that is beeing tested.
+* The Federation Lab will test whether the entity beeing tested meet the specification of the SAML 2.0 profiles reccomended for inter-federation communication.
+
+
+*Tentative Participants:*
+
+* RedIRIS
+* DFN
+* SWITCH
+* UNINETT
+
+## Virtual Organizations
+
+When SSO across national borders, the next functionality that is needed in order to better collaborate online is the ability to create groups of people and use those groups to define access control.
+
+This project intends to create a privacy-preserving VO solution that works in an inter-federation context. A proof of concept service should be created, ready to be deployed in eduGAIN (SA3).
+
+Some of the problems with existing VO solutions is:
+
+* No standardized protocol for looking up groups or memberships.
+* Privacy-invasive protocol used for looking up groups or memberships.
+* Dependancy on an Identity Provider makes it almost impossible to deploy in an inter-federation context.
+* We should aim to solve all these problems in a new solution.
+
+*Tentative Participants:*
+
+* CARnet
+* RedIRIS
+* CRU
+* DFN
+* SWITCH
+* Wayf
+
+
+
+
+## Metadata distribution
+
+Manually exchanged metadata does not scale on a cross-national level. An infrastructure for automatically exchanging metadata with a supplied trust-model is neccessary. This is a less in explored area as of now. More experience is needed in the area.
+
+This item includes investigation in multiple alternative approaches to metadata distribution.
+
+Internet2 has come up with a completely distributed metadata distribution method, referred to as Dynamic SAML. The lack of a supplying trust model to this method, has prevented it from been investigated more. This method has potential and should be investigated more in the context of European federations.
+
+Two other models that should be investigated is
+
+the simple pull-model used in the nordic Kalmar Union.
+different flavours of the metadata service implemented as a part of GEANT2.
+Tasks:
+
+* Investigation on accompaning trust-models for Dynamic SAML for automated metadata distribution.
+* Investigation on Kalmar model
+
+
+*Tentative Participants:*
+
+* CARnet
+* CRU
+* UNINETT
+* RedIRIS
+* SWITCH
+* Wayf
+
+
+## Beyond Web-SSO
+
+Most european federations have authentication solutions focused on WebSSO only, and there is a high demand for re-using the authentication framework for other architectures, like non-web-based applications and command line utilities.
+
+In this work item track, participants will investigate in existing solutions, and new ideas.
+
+Josh Howlett has proposed a new idea within this field, that can be used as a proposal.
+
+*Tentative Participants:*
+
+* CARnet
+* DFN
+* RedIRIS
+* Wayf
+
+
+## Federation Harmonization
+
+This project involves some independent topics that should be studied in an inter-federation context. Each of these topics should result in a short best practice document.
+
+Managing a federated identity infrastructure involves a lot of choices. Best practice documents may guide federations to make the same choices, and hence increase tha chances for cross-federation interoperability.
+
+The initial plan is to create best practice documents on these topics:
+
+* SAML 2.0 Profile
+* Single Log-out
+* De-provisioning
+* Attribute handling
+
+
+
+*Tentative Participants:*
+
+* CARnet
+* DFN
+* SWITCH
+* Wayf
+
